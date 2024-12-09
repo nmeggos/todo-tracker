@@ -1,7 +1,7 @@
 using Ardalis.GuardClauses;
 using TodoTracker.Shared.Domain;
 
-namespace TodoTracker.Domain;
+namespace TodoTracker.Domain.WorkManagement;
 
 public class WorkItem : AggregateRoot<WorkItemId>
 {

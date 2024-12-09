@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TodoTracker.Domain;
+using TodoTracker.Domain.WorkManagement;
 using TodoTracker.Shared.Infrastructure.Persistence;
 
 namespace TodoTracker.Infrastructure.Persistence;

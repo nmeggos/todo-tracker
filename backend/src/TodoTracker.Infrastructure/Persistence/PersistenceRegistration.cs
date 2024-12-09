@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using TodoTracker.Shared.Infrastructure.Persistence.Settings;
 using TodoTracker.Domain;
+using TodoTracker.Domain.WorkManagement;
 using TodoTracker.Infrastructure.Persistence.Repositories;
 
 namespace TodoTracker.Infrastructure.Persistence;

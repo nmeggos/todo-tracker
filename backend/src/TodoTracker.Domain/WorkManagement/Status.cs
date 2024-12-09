@@ -1,4 +1,4 @@
-namespace TodoTracker.Domain;
+namespace TodoTracker.Domain.WorkManagement;
 
 public record Status
 {

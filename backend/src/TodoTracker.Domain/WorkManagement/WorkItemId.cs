@@ -1,6 +1,6 @@
 using TodoTracker.Shared.Domain;
 
-namespace TodoTracker.Domain;
+namespace TodoTracker.Domain.WorkManagement;
 
 public record WorkItemId : StronglyTypedId<Guid>
 {

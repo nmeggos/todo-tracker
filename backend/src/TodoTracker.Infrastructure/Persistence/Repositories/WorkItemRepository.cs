@@ -1,6 +1,7 @@
 using Ardalis.GuardClauses;
 using Microsoft.EntityFrameworkCore;
 using TodoTracker.Domain;
+using TodoTracker.Domain.WorkManagement;
 using TodoTracker.Shared.Guards;
 
 namespace TodoTracker.Infrastructure.Persistence.Repositories;

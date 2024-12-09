@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using TodoTracker.Shared.CQRS.Commands;
 using TodoTracker.Shared.Guards;
 using TodoTracker.Domain;
+using TodoTracker.Domain.WorkManagement;
 
 namespace TodoTracker.Application.Features.CreateWorkItem;
 

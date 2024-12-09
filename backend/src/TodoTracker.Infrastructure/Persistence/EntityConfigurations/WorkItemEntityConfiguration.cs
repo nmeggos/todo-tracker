@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TodoTracker.Domain;
+using TodoTracker.Domain.WorkManagement;
 
 namespace TodoTracker.Infrastructure.Persistence.EntityConfigurations;
 

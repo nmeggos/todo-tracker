@@ -15,8 +15,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Modules\WorkManagement\TodoTracker.Application\TodoTracker.Application.csproj" />
-      <ProjectReference Include="..\Modules\WorkManagement\TodoTracker.Infrastructure\TodoTracker.Infrastructure.csproj" />
       <ProjectReference Include="..\TodoTracker.Application\TodoTracker.Application.csproj" />
       <ProjectReference Include="..\TodoTracker.Infrastructure\TodoTracker.Infrastructure.csproj" />
       <ProjectReference Include="..\TodoTracker.Shared\TodoTracker.Shared.csproj" />

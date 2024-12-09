@@ -7,7 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\TodoTracker.Shared\TodoTracker.Shared.csproj" />
       <ProjectReference Include="..\TodoTracker.Application\TodoTracker.Application.csproj" />
       <ProjectReference Include="..\TodoTracker.Domain\TodoTracker.Domain.csproj" />
     </ItemGroup>
