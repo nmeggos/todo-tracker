@@ -1,7 +1,5 @@
-
 using Serilog;
-using TodoTracker.API.Configurations;
-using TodoTracker.Shared.Infrastructure.Logging;
+using TodoTracker.API.Infrastructure;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -15,18 +13,11 @@ try
     var environment = builder.Environment;
     var configuration = builder.Configuration;
     
-    builder.AddConfigurations();
-    builder.AddLogging();
+    builder.AddCore();
 
     var app = builder.Build();
 
-    app.UseSerilogRequestLogging();
-
-    app.MapGet("/", () =>
-    {
-        Log.Information("Hello World endpoint hit");
-        return "Hello World!";
-    });
+    app.ConfigureCore();
 
     app.Run();
 }
@@ -39,6 +30,9 @@ finally
     Log.CloseAndFlush();
 }
 
-public partial class Program
+namespace TodoTracker.API
 {
+    public partial class Program
+    {
+    }
 }
