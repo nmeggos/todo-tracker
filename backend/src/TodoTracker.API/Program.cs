@@ -1,5 +1,5 @@
 using Serilog;
-using TodoTracker.API.Infrastructure;
+using TodoTracker.API.Extensions;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -17,7 +17,7 @@ try
 
     var app = builder.Build();
 
-    app.ConfigureCore();
+    ServiceExtensions.ConfigureCore(app);
 
     app.Run();
 }

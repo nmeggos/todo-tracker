@@ -7,9 +7,9 @@ using TodoTracker.Infrastructure.Persistence;
 using TodoTracker.Shared.CQRS;
 using TodoTracker.Shared.Infrastructure.Logging;
 
-namespace TodoTracker.API.Infrastructure;
+namespace TodoTracker.API.Extensions;
 
-public static class ModuleRegistration
+public static class ServiceExtensions
 {
     public static WebApplicationBuilder AddCore(this WebApplicationBuilder builder)
     {
