@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using Ardalis.GuardClauses;
+using FluentValidation.Validators;
 using TodoTracker.Shared.Domain.Exceptions;
 
 namespace TodoTracker.Shared.Guards;
