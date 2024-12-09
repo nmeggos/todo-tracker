@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.API", "src\TodoTracker.API\TodoTracker.API.csproj", "{8002E9B4-16CD-481D-B2CB-9E39F3E95B9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.WorkManagement.Application", "src\Modules\WorkManagement\TodoTracker.WorkManagement.Application\TodoTracker.WorkManagement.Application.csproj", "{BDE1F63A-B6C2-4271-A235-47F7CB24242F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.workManagement.Domain", "src\Modules\WorkManagement\TodoTracker.workManagement.Domain\TodoTracker.workManagement.Domain.csproj", "{C8C442EA-6F57-4708-AAA9-31E0571B3E02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.WorkManagement.Infrastructure", "src\Modules\WorkManagement\TodoTracker.WorkManagement.Infrastructure\TodoTracker.WorkManagement.Infrastructure.csproj", "{4EDC78D6-CDAE-4BC5-B7C5-40C36025B859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.Shared", "src\TodoTracker.Shared\TodoTracker.Shared.csproj", "{F43B223C-6085-461B-9652-E7766632CD5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.WorkManagement.UnitTests", "tests\Modules\WorkManagement\TodoTracker.WorkManagement.UnitTests\TodoTracker.WorkManagement.UnitTests.csproj", "{E65A2BDF-757B-45FA-8D5C-52F755910031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.WorkManagement.ArchTests", "tests\Modules\WorkManagement\TodoTracker.WorkManagement.ArchTests\TodoTracker.WorkManagement.ArchTests.csproj", "{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F655E801-E142-46C2-B236-C5D2D8A55789}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA0BD0FF-66B5-4769-9803-4C25BBF61F3D}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.backend.yml = docker-compose.backend.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8002E9B4-16CD-481D-B2CB-9E39F3E95B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8002E9B4-16CD-481D-B2CB-9E39F3E95B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8002E9B4-16CD-481D-B2CB-9E39F3E95B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8002E9B4-16CD-481D-B2CB-9E39F3E95B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE1F63A-B6C2-4271-A235-47F7CB24242F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE1F63A-B6C2-4271-A235-47F7CB24242F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE1F63A-B6C2-4271-A235-47F7CB24242F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE1F63A-B6C2-4271-A235-47F7CB24242F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C442EA-6F57-4708-AAA9-31E0571B3E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C442EA-6F57-4708-AAA9-31E0571B3E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C442EA-6F57-4708-AAA9-31E0571B3E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C442EA-6F57-4708-AAA9-31E0571B3E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EDC78D6-CDAE-4BC5-B7C5-40C36025B859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDC78D6-CDAE-4BC5-B7C5-40C36025B859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDC78D6-CDAE-4BC5-B7C5-40C36025B859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDC78D6-CDAE-4BC5-B7C5-40C36025B859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43B223C-6085-461B-9652-E7766632CD5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43B223C-6085-461B-9652-E7766632CD5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43B223C-6085-461B-9652-E7766632CD5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43B223C-6085-461B-9652-E7766632CD5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E65A2BDF-757B-45FA-8D5C-52F755910031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E65A2BDF-757B-45FA-8D5C-52F755910031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E65A2BDF-757B-45FA-8D5C-52F755910031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E65A2BDF-757B-45FA-8D5C-52F755910031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BDE1F63A-B6C2-4271-A235-47F7CB24242F} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
+		{C8C442EA-6F57-4708-AAA9-31E0571B3E02} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
+		{4EDC78D6-CDAE-4BC5-B7C5-40C36025B859} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
+		{F655E801-E142-46C2-B236-C5D2D8A55789} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
+		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04} = {F655E801-E142-46C2-B236-C5D2D8A55789}
+		{E65A2BDF-757B-45FA-8D5C-52F755910031} = {F655E801-E142-46C2-B236-C5D2D8A55789}
+	EndGlobalSection
+EndGlobal

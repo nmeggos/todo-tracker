@@ -1,0 +1,42 @@
+﻿services:
+  todotracker.api:
+    container_name: todotracker.api
+    build:
+      context: .
+      dockerfile: src/TodoTracker.API/Dockerfile
+    ports:
+        - "5000:8080"
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+  
+  todotracker.sql:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: todotracker.sql
+    environment:
+        ACCEPT_EULA: Y
+        SA_PASSWORD: Password123!
+        MSSQL_PID: Developer
+    ports:
+        - "1433:1433"
+    networks:
+        - todotracker-network
+    volumes:
+        - todotracker-db-data:/var/opt/mssql/data
+          
+          
+  todotracker.seq:
+    image: datalust/seq:latest
+    container_name: todotracker.seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5341:80"
+    networks:
+        - todotracker-network
+          
+networks:
+    todotracker-network:
+        driver: bridge
+        
+volumes:
+    todotracker-db-data:
