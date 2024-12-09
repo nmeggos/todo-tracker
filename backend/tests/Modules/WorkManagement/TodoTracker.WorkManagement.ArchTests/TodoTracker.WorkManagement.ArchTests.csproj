@@ -21,6 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\..\src\Modules\WorkManagement\TodoTracker.WorkManagement.API\TodoTracker.WorkManagement.API.csproj" />
       <ProjectReference Include="..\..\..\..\src\Modules\WorkManagement\TodoTracker.WorkManagement.Application\TodoTracker.WorkManagement.Application.csproj" />
       <ProjectReference Include="..\..\..\..\src\Modules\WorkManagement\TodoTracker.workManagement.Domain\TodoTracker.workManagement.Domain.csproj" />
       <ProjectReference Include="..\..\..\..\src\Modules\WorkManagement\TodoTracker.WorkManagement.Infrastructure\TodoTracker.WorkManagement.Infrastructure.csproj" />

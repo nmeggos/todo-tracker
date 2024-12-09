@@ -21,7 +21,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA0BD0FF-66B5-4769-9803-4C25BBF61F3D}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.backend.yml = docker-compose.backend.yml
+		docker-compose.infrastructure.yml = docker-compose.infrastructure.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoTracker.WorkManagement.API", "src\Modules\WorkManagement\TodoTracker.WorkManagement.API\TodoTracker.WorkManagement.API.csproj", "{8F248CA5-BA4B-485D-B53D-C4C421D43BAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +60,10 @@ Global
 		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F248CA5-BA4B-485D-B53D-C4C421D43BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F248CA5-BA4B-485D-B53D-C4C421D43BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F248CA5-BA4B-485D-B53D-C4C421D43BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F248CA5-BA4B-485D-B53D-C4C421D43BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BDE1F63A-B6C2-4271-A235-47F7CB24242F} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
@@ -65,5 +72,6 @@ Global
 		{F655E801-E142-46C2-B236-C5D2D8A55789} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
 		{F03C26B7-D25E-4B57-8B8A-3A349D04BE04} = {F655E801-E142-46C2-B236-C5D2D8A55789}
 		{E65A2BDF-757B-45FA-8D5C-52F755910031} = {F655E801-E142-46C2-B236-C5D2D8A55789}
+		{8F248CA5-BA4B-485D-B53D-C4C421D43BAB} = {FDDD9FA1-B9F4-4BD5-8637-20730ADE2BD7}
 	EndGlobalSection
 EndGlobal

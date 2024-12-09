@@ -16,9 +16,9 @@ public abstract class AggregateRoot<TId> : Entity<TId>, IHaveAudit
     }
     
     public string CreatedBy { get; protected set; }
-    public DateTime CreatedOn { get; protected set; }
-    public string LastModifiedBy { get; protected set; }
-    public DateTime LastModifiedOn { get; protected set; }
+    public DateTimeOffset CreatedOn { get; protected set; }
+    public string? LastModifiedBy { get; protected set; }
+    public DateTimeOffset? LastModifiedOn { get; protected set; }
     
     public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
     

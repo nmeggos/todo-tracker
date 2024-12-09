@@ -6,7 +6,7 @@ namespace TodoTracker.WorkManagement.Infrastructure.Persistence;
 
 public class WorkManagementDbContext : BaseDbContext
 {
-    public WorkManagementDbContext(DbContextOptions options) : base(options)
+    public WorkManagementDbContext(DbContextOptions<WorkManagementDbContext> options) : base(options)
     {
     }
     

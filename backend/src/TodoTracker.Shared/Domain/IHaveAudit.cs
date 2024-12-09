@@ -3,7 +3,7 @@
 public interface IHaveAudit
 {
     public string CreatedBy { get; }
-    public DateTime CreatedOn { get; }
-    public string LastModifiedBy { get; }
-    public DateTime LastModifiedOn { get; }
+    public DateTimeOffset CreatedOn { get; }
+    public string? LastModifiedBy { get; }
+    public DateTimeOffset? LastModifiedOn { get; }
 }

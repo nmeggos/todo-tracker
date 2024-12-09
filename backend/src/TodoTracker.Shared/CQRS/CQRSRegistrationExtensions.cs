@@ -7,9 +7,9 @@ namespace TodoTracker.Shared.CQRS;
 
 public static class CqrsRegistrationExtensions
 {
-    public static IServiceCollection AddCQRS(
+    public static IServiceCollection AddCqrs(
         this IServiceCollection services,
-        Action<IServiceCollection> decorators = null,
+        Action<IServiceCollection>? decorators = null,
         params Assembly[] assemblies)
     {
        var assembliesToScan = assemblies.Any() ? assemblies : new[] { Assembly.GetExecutingAssembly() };

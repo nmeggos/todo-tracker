@@ -14,10 +14,12 @@ public static class PersistenceRegistration
         this IServiceCollection services,
         IConfiguration configuration)
     {
+        services.ConfigureOptions<DatabaseSettingsSetup>();
+        
         services.AddDbContext<WorkManagementDbContext>((serviceProvider, options) =>
         {
             var datastoreSettings = serviceProvider.GetRequiredService<IOptions<DatabaseSettings>>().Value;
-            options.UseSqlServer(datastoreSettings.ConnectionString);
+            options.UseNpgsql(datastoreSettings.ConnectionString).UseSnakeCaseNamingConvention();
         });
 
         services.AddScoped<IWorkItemRepository, WorkItemRepository>();

@@ -1,7 +1,4 @@
-﻿using FluentAssertions;
-using NetArchTest.Rules;
-using TodoTracker.Shared.Domain.Events;
-using TodoTracker.workManagement.Domain;
+﻿using TodoTracker.Shared.Domain.Events;
 
 namespace TodoTracker.WorkManagement.ArchTests;
 

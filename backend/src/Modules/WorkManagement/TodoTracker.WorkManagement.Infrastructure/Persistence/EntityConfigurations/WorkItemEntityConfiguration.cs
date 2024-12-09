@@ -8,7 +8,7 @@ public class WorkItemEntityConfiguration : IEntityTypeConfiguration<WorkItem>
 {
     public void Configure(EntityTypeBuilder<WorkItem> builder)
     {
-        builder.ToTable("WorkItem")
+        builder.ToTable("work_item")
             .HasKey(pk => pk.Id);
 
         builder.Property(p => p.Id)

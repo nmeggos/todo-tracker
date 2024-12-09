@@ -8,20 +8,24 @@
         - "5000:8080"
     environment:
         - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+        - todotracker.postgres
+        - todotracker.seq
+    networks:
+        - todotracker-network
   
-  todotracker.sql:
-    image: mcr.microsoft.com/azure-sql-edge
-    container_name: todotracker.sql
+  todotracker.postgres:
+    image: postgres
+    container_name: todotracker.postgres
     environment:
-        ACCEPT_EULA: Y
-        SA_PASSWORD: Password123!
-        MSSQL_PID: Developer
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-        - "1433:1433"
+      - "5432:5432"
     networks:
         - todotracker-network
     volumes:
-        - todotracker-db-data:/var/opt/mssql/data
+      - todotracker-db-data:/var/lib/postgresql/data
           
           
   todotracker.seq:
