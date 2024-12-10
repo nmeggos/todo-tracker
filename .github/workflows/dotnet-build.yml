@@ -1,0 +1,32 @@
+﻿name: DOTNET Build
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore backend/src/**/*.csproj
+
+      - name: Build
+        run: dotnet build backend/src/**/*.csproj --no-restore --configuration Release
+
+      - name: Run tests
+        run: dotnet test backend/EventPlanner.sln --no-build --configuration Release --collect:"XPlat Code Coverage"
