@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+      <Content Remove="api-logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TodoTracker.Application\TodoTracker.Application.csproj" />
+      <ProjectReference Include="..\TodoTracker.Infrastructure\TodoTracker.Infrastructure.csproj" />
+      <ProjectReference Include="..\TodoTracker.Shared\TodoTracker.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="api-logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="api-logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="api-logs\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="api-logs\log-20241209.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Asp.Versioning.Mvc" />
+      <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+</Project>

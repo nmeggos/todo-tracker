@@ -1,0 +1,31 @@
+﻿services:
+  todotracker.postgres:
+    image: postgres
+    container_name: todotracker.postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - todotracker-network
+    volumes:
+      - todotracker-db-data:/var/lib/postgresql/data
+
+
+  todotracker.seq:
+    image: datalust/seq:latest
+    container_name: todotracker.seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5341:80"
+    networks:
+      - todotracker-network
+
+networks:
+  todotracker-network:
+    driver: bridge
+
+volumes:
+  todotracker-db-data:
