@@ -17,7 +17,7 @@ try
 
     var app = builder.Build();
 
-    ServiceExtensions.ConfigureCore(app);
+    app.ConfigureCore();
 
     app.Run();
 }
@@ -30,9 +30,6 @@ finally
     Log.CloseAndFlush();
 }
 
-namespace TodoTracker.API
+public partial class Program
 {
-    public partial class Program
-    {
-    }
 }

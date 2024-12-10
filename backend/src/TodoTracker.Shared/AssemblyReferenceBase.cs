@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace TodoTracker.Shared.Registrations;
+namespace TodoTracker.Shared;
 
 public abstract class AssemblyReferenceBase : IAssemblyReference
 {

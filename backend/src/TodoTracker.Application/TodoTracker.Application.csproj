@@ -11,6 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Asp.Versioning.Abstractions" />
+      <PackageReference Include="Asp.Versioning.Mvc" />
       <PackageReference Include="FluentValidation" />
     </ItemGroup>
 

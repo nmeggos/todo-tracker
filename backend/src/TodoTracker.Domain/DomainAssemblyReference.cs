@@ -1,4 +1,4 @@
-﻿using TodoTracker.Shared.Registrations;
+﻿using TodoTracker.Shared;
 
 namespace TodoTracker.Domain;
 

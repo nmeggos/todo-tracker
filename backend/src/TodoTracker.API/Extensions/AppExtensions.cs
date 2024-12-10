@@ -1,6 +1,8 @@
+using Asp.Versioning;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using TodoTracker.Infrastructure.Persistence;
+using TodoTracker.Shared.Endpoints;
 
 namespace TodoTracker.API.Extensions;
 
@@ -17,6 +19,7 @@ public static class AppExtensions
             dbContext.Database.Migrate();
         });
 
+        app.MapModuleEndpoints();
         app.UseRouting();
 
         app.UseEndpoints(endpoints =>
@@ -24,6 +27,23 @@ public static class AppExtensions
             endpoints.MapControllers();
         });
 
+        return app;
+    }
+    
+    internal static WebApplication MapModuleEndpoints(this WebApplication app)
+    {
+        var versionSet = app.NewApiVersionSet()
+            .HasApiVersion(new ApiVersion(1))
+            .HasApiVersion(new ApiVersion(2))
+            .ReportApiVersions()
+            .Build();
+        
+        var group = app.MapGroup("v{version:apiVersion}")
+            .WithApiVersionSet(versionSet);
+        
+        group.MapEndpoints();
+        group.MapControllers();
+        
         return app;
     }
 }
