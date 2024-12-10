@@ -23,10 +23,10 @@ jobs:
           dotnet-version: '9.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore backend/src/**/*.csproj
+        run: dotnet restore backend/src/TodoTracker.API/*.csproj
 
       - name: Build
-        run: dotnet build backend/src/**/*.csproj --no-restore --configuration Release
+        run: dotnet build backend/src/TodoTracker.API/*.csproj --no-restore --configuration Release
 
       - name: Run tests
         run: dotnet test backend/EventPlanner.sln --no-build --configuration Release --collect:"XPlat Code Coverage"
