@@ -10,8 +10,6 @@ try
     Log.Information("Server starting up");
     
     var builder = WebApplication.CreateBuilder(args);
-    var environment = builder.Environment;
-    var configuration = builder.Configuration;
     
     builder.AddCore();
 
@@ -19,7 +17,7 @@ try
 
     app.ConfigureCore();
 
-    app.Run();
+    await app.RunAsync();
 }
 catch (Exception e)
 {
@@ -27,7 +25,7 @@ catch (Exception e)
 }
 finally
 {
-    Log.CloseAndFlush();
+    await Log.CloseAndFlushAsync();
 }
 
 public partial class Program

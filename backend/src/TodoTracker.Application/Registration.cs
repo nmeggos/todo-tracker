@@ -7,7 +7,7 @@ public static class Registration
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
-        services.AddCqrs(assemblies: new[] { typeof(ApplicationAssemblyReference).Assembly });
+        services.AddCqrs(assemblies: [typeof(ApplicationAssemblyReference).Assembly]);
         
         return services;
     }

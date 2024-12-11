@@ -22,7 +22,7 @@ public record CreateWorkItemCommand : ICommand<CreateWorkItemResponse>
         DueDate = dueDate;
     }
 
-    public string Title { get; init; }
+    public string Title { get; init; } = string.Empty;
     public string? Description { get; init; }
     public DateTime DueDate { get; init; }
     
@@ -60,7 +60,11 @@ public class CreateWorkItemCommandHandler : ICommandHandler<CreateWorkItemComman
     public async Task<CreateWorkItemResponse> Handle(CreateWorkItemCommand request, CancellationToken cancellationToken)
     {
         var workItem = WorkItem.Create(request.Title, request.Description, request.DueDate);
+        
         await _workItemRepository.AddAsync(workItem);
+        
+        _logger.LogInformation("WorkItem with Id {WorkItemId} created", workItem.Id);
+        
         return new CreateWorkItemResponse(workItem.Id);
     }
 }
